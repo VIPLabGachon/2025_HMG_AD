@@ -1,0 +1,12 @@
+position: 100.7419 1154.868 -0.3608913
+orientation: 1.078888 0.9925552 61.83179
+enu_velocity: -6.140656E-07 -1.405861E-06 -1.537123E-07
+velocity: -1.526343E-06 -1.256852E-07 -1.778444E-07
+angularVelocity: 7.548825E-07 -1.137477E-06 -7.888599E-07
+acceleration: -7.662119E-05 -4.269068E-05 -7.337492E-05
+accel: 0
+brake: 1
+steer: 0.0062
+linkid: A219BS010395
+trafficlightid: C119BS010046
+turn_signal_lamp: 1

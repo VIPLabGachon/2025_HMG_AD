@@ -5,12 +5,13 @@ from models.backbones.efficientnet import EfficientNetExtractor
 from models.encoder import SequenceEncoder, SingleFrameEncoder, TemporalTransformer
 from models.BEVHDmapFusionNet import BEVHDMapFusionNet
 from models.decoder import BEVDecoderWithStackedGRU
+from torchvision.models import ResNet18_Weights
 
 class FrontCameraProcessorWithAttention(nn.Module):
     def __init__(self, output_dim: int = 256, pretrained: bool = True):
         super().__init__()
         # ResNet 백본
-        resnet = resnet18(pretrained=pretrained)
+        resnet = resnet18(weights=ResNet18_Weights.IMAGENET1K_V1)
         self.feature_extractor = nn.Sequential(*list(resnet.children())[:-2])
 
         # Feature map 채널 크기 조정
@@ -94,7 +95,7 @@ class CombinedModel(nn.Module):
             bev_dim=128,
             hd_map_dim=6,
             front_view_dim=256,
-            ego_dim=29,
+            ego_dim=28,
             fused_dim=64,
             output_dim=32
         )
