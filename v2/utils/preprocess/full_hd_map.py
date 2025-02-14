@@ -4,19 +4,19 @@ import cv2
 
 # === 1. JSON 파일 불러오기 ===
 # drivable area 데이터
-with open('/home/vip/hd/Dataset/Map_Data/R_KR_PR_Sangam_DP/road_mesh_out_line_polygon_set.json', 'r') as f:
+with open('/home/v/vip_ws/src/hmg_2025/src/2025_HMG_AD/hd_sample/Map_Data/R_KR_PG_KATRI/road_mesh_out_line_polygon_set.json', 'r') as f:
     drivable_data = json.load(f)
 
 # lane 데이터
-with open('/home/vip/hd/Dataset/Map_Data/R_KR_PR_Sangam_DP/lane_boundary_set.json', 'r') as f:
+with open('/home/v/vip_ws/src/hmg_2025/src/2025_HMG_AD/hd_sample/Map_Data/R_KR_PG_KATRI/lane_boundary_set.json', 'r') as f:
     lane_data = json.load(f)
 
 # crosswalk 데이터
-with open('/home/vip/hd/Dataset/Map_Data/R_KR_PR_Sangam_DP/singlecrosswalk_set.json', 'r') as f:
+with open('/home/v/vip_ws/src/hmg_2025/src/2025_HMG_AD/hd_sample/Map_Data/R_KR_PG_KATRI/singlecrosswalk_set.json', 'r') as f:
     crosswalk_data = json.load(f)
 
 # traffic light 데이터
-with open('/home/vip/hd/Dataset/Map_Data/R_KR_PR_Sangam_DP/traffic_light_set.json', 'r') as f:
+with open('/home/v/vip_ws/src/hmg_2025/src/2025_HMG_AD/hd_sample/Map_Data/R_KR_PG_KATRI/traffic_light_set.json', 'r') as f:
     traffic_light_data = json.load(f)
 
 # === 2. 전체 좌표(드라이버블 영역, lane, crosswalk, traffic light)로 이미지 범위 결정 ===
